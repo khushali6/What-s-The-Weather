@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
         result=findViewById(R.id.display);
     }
     public void get(View v){
-        String apikey="843861054f9fbf71fda325539b0ee801";
+        String apikey="YOUR API KEY";
         String cityName=city.getText().toString();
-        String url="https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=843861054f9fbf71fda325539b0ee801";
+        String url="https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid="+apikey;
         RequestQueue queue= Volley.newRequestQueue(getApplicationContext());
         JsonObjectRequest request=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
